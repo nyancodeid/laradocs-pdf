@@ -33,3 +33,5 @@ export async function getRepositoryContent(): Promise<TRepositoryContents> {
 
   return response.json();
 }
+
+export function useCleanName(name: string) {}
