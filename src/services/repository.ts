@@ -23,10 +23,10 @@ export async function getRepositoryContent(): Promise<TRepositoryContents> {
   const url = `https://api.github.com/repos/mnishihan/laravel-docs-in-pdf/contents`;
 
   const response = await fetch(url, {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'content-type': 'application/json',
-    },
+      "content-type": "application/json"
+    }
   });
 
   if (!response.ok) return [];
@@ -34,4 +34,17 @@ export async function getRepositoryContent(): Promise<TRepositoryContents> {
   return response.json();
 }
 
-export function useCleanName(name: string) {}
+export async function getLatestBuildLog() {
+  const url = `https://raw.githubusercontent.com/mnishihan/laravel-docs-in-pdf/main/latest-build.json`;
+
+  const response = await fetch(url, {
+    method: "GET",
+    headers: {
+      "content-type": "application/json"
+    }
+  });
+
+  if (!response.ok) return {};
+
+  return response.json();
+}

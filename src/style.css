@@ -1,5 +1,4 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -28,7 +27,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 512px;
   min-height: 100vh;
 }
 
@@ -48,13 +47,6 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 .card {
   padding: 2em;
@@ -62,6 +54,7 @@ button:focus-visible {
 
 #app {
   max-width: 1280px;
+  width: 75vw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
