@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 .button {
-  @apply shadow text-sm px-3 py-2 leading-4 text-white bg-laravel-300 active:bg-gray-900 active:text-gray-200 hover:bg-gray-800 disabled:bg-laravel-900 rounded-lg inline-flex items-center gap-2 disabled:cursor-not-allowed transform leading-none transition duration-100 ease-in-out ring-laravel-100/50 active:ring-offset-gray-900 ring-offset-white ring-offset-2 ring-2;
+  @apply shadow text-[12px] px-[10px] py-1 leading-4 bg-gray-50 rounded-lg inline-flex items-center gap-2 disabled:cursor-not-allowed transform leading-none transition duration-100 ease-in-out;
+}
+.button-primary {
+  @apply text-white bg-laravel-300 active:bg-gray-900 active:text-gray-200 hover:bg-gray-800 disabled:bg-laravel-900  ring-offset-2 ring-2 ring-laravel-100/50 active:ring-offset-gray-900 ring-offset-white;
 }

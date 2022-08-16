@@ -2,6 +2,7 @@
 import { computed, defineProps, ref } from "vue";
 import byteSize from "byte-size";
 import RiDownloadLine from "~icons/ri/download-line";
+import RiExternalLinkLine from "~icons/ri/external-link-line";
 import { IContent } from "../services/repository";
 
 interface IProps {
@@ -14,10 +15,13 @@ const title = computed(() => {
   return content.name.replace(".pdf", "").replace("-", " ");
 });
 const size = computed(() => byteSize(content.size));
+const onlineDocs = computed(() => {
+  const version = content.name.replace(".pdf", "").replace("laravel-", "");
 
-const onDownload = (link: string) => {
-  console.log(link);
-};
+  if (["4.1", "4.0", "3.x"].includes(version)) return null;
+
+  return `https://laravel.com/docs/${version}`;
+});
 </script>
 
 <template>
@@ -25,17 +29,31 @@ const onDownload = (link: string) => {
     class="bg-white text-gray-800 p-4 rounded-md shadow-md flex flex-col items-center"
   >
     <h3 class="capitalize">{{ title }}</h3>
-    <span class="text-[11px]">{{ content.sha }}</span>
-    <img
-      class="my-4 w-1/4"
-      src="https://laravel.com/img/logomark.min.svg"
-      alt=""
-    />
+    <span class="text-[11px]">
+      <span :title="content.sha">SHA: {{ content.sha.substr(0, 8) }}</span>
+    </span>
+    <img class="my-4 w-1/4" src="laravel.min.svg" alt="" />
     <span>{{ size }}</span>
 
-    <button class="button mt-2" @click="onDownload(content.download_url)">
-      <RiDownloadLine />
-      PDF
-    </button>
+    <div class="flex">
+      <a
+        class="button button-primary mt-2 mr-2"
+        :href="content.download_url"
+        download
+      >
+        <RiDownloadLine />
+        PDF
+      </a>
+
+      <a
+        v-if="!!onlineDocs"
+        class="button mt-2"
+        :href="onlineDocs"
+        target="_blank"
+      >
+        <RiExternalLinkLine />
+        Online Docs
+      </a>
+    </div>
   </div>
 </template>
