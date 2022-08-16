@@ -3,7 +3,7 @@
 
 <template>
   <div class="flex flex-col items-center my-6">
-    <h1 class="text-6xl font-bold font-laravel">
+    <h1 class="text-5xl md:text-6xl font-bold font-laravel">
       <span class="text-laravel-300">Laravel</span> Docs in
       <span class="text-laravel-300">PDF</span>
     </h1>
