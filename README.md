@@ -1,3 +1,3 @@
-# vitejs-vite-wtwdv1
+# Laravel Docs in PDF (Website Interface)
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-wtwdv1)
+Laravel Docs in PDF (Website Interface). Content and original by [mnishihan/laravel-docs-in-pdf](https://github.com/mnishihan/laravel-docs-in-pdf)
