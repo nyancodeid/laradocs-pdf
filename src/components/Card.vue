@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { computed, defineProps, ref } from "vue";
+import { computed } from "vue";
 import byteSize from "byte-size";
-import RiDownloadLine from "~icons/ri/download-line";
-import RiExternalLinkLine from "~icons/ri/external-link-line";
 import { IContent } from "../services/repository";
 
 interface IProps {
@@ -32,7 +30,7 @@ const onlineDocs = computed(() => {
     <span class="text-[11px]">
       <span :title="content.sha">SHA: {{ content.sha.substr(0, 8) }}</span>
     </span>
-    <img class="my-4 w-1/4" src="laravel.min.svg" alt="" />
+    <img class="my-4 w-1/4" src="/laravel.min.svg" alt="" />
     <span>{{ size }}</span>
 
     <div class="flex">
@@ -41,7 +39,7 @@ const onlineDocs = computed(() => {
         :href="content.download_url"
         download
       >
-        <RiDownloadLine />
+        <i-ri-download-line />
         PDF
       </a>
 
@@ -51,7 +49,7 @@ const onlineDocs = computed(() => {
         :href="onlineDocs"
         target="_blank"
       >
-        <RiExternalLinkLine />
+        <i-ri-external-link-line />
         Online Docs
       </a>
     </div>

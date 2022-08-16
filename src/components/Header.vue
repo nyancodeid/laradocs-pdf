@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import RiGithubFill from "~icons/ri/github-fill";
 </script>
 
 <template>
@@ -24,7 +23,7 @@ import RiGithubFill from "~icons/ri/github-fill";
         href="https://laravel.com"
         class="shadow px-4 py-3 leading-4 rounded-lg bg-gray-700 text-white inline-flex items-center gap-2"
       >
-        <RiGithubFill />
+        <i-ri-github-fill />
         Github
       </a>
     </div>

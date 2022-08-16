@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import Card from "./Card.vue";
-import { getRepositoryContent } from "../services/repository.ts";
+import { getRepositoryContent, IContent } from "../services/repository";
 
-const data = ref(null);
+const data = ref<IContent[]>([]);
 const count = ref(0);
 
 onMounted(async () => {
