@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     Contents: typeof import('./src/components/Contents.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
+    IRiArrowRightLine: typeof import('~icons/ri/arrow-right-line')['default']
     IRiDownloadLine: typeof import('~icons/ri/download-line')['default']
     IRiExternalLinkLine: typeof import('~icons/ri/external-link-line')['default']
     IRiGithubFill: typeof import('~icons/ri/github-fill')['default']

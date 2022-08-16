@@ -24,7 +24,7 @@ const onlineDocs = computed(() => {
 
 <template>
   <div
-    class="bg-white text-gray-800 p-4 rounded-md shadow-md flex flex-col items-center"
+    class="bg-white text-gray-800 px-2 py-4 md:px-4 rounded-md shadow-md flex flex-col items-center"
   >
     <h3 class="capitalize">{{ title }}</h3>
     <span class="text-[11px]">
@@ -50,7 +50,7 @@ const onlineDocs = computed(() => {
         target="_blank"
       >
         <i-ri-external-link-line />
-        Online Docs
+        Live Docs
       </a>
     </div>
   </div>

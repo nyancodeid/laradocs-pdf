@@ -53,14 +53,14 @@
         href="https://github.com/mnishihan/laravel-docs-in-pdf"
         class="shadow px-2 py-2 text-sm leading-4 rounded-lg bg-gray-700 text-white inline-flex items-center gap-2"
       >
-        <ri-github-fill />
+        <i-ri-github-fill />
         Laravel Docs in PDF Repos'
       </a>
       <a
         href="https://github.com/nyancodeid/laradocs-pdf"
         class="shadow px-3 py-2 text-sm leading-4 rounded-lg bg-gray-700 text-white inline-flex items-center gap-2"
       >
-        <ri-github-fill />
+        <i-ri-github-fill />
         Web Interface Repos'
       </a>
     </div>
